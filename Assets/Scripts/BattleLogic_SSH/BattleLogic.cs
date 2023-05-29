@@ -94,22 +94,22 @@ public partial class BattleLogic : MonoBehaviourPunCallbacks
     public GameObject PlayerUnit()
     {
         int ran = GameMGR.Instance.GetRandomValue(0, 0, true);
-        GameObject retunrUnit = null;
+        GameObject returnUnit = null;
         while (playerForwardUnits[ran] == null)
         {
             if (playerForwardUnits[0] == null && playerForwardUnits[1] == null && playerForwardUnits[2] == null) break;
             ran = GameMGR.Instance.GetRandomValue(0, 0, true);
         }
-        retunrUnit = playerForwardUnits[ran];
-        if (retunrUnit != null) return retunrUnit;
+        returnUnit = playerForwardUnits[ran];
+        if (returnUnit != null) return returnUnit;
         while (playerBackwardUnits[ran] == null)
         {
 
             if (playerBackwardUnits[0] == null && playerBackwardUnits[1] == null && playerBackwardUnits[2] == null) break;
             ran = GameMGR.Instance.GetRandomValue(0, 0, true);
         }
-        retunrUnit = playerBackwardUnits[ran];
-        return retunrUnit;
+        returnUnit = playerBackwardUnits[ran];
+        return returnUnit;
     }
     public GameObject EnemyUnit()
     {

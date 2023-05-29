@@ -11,6 +11,8 @@ using Photon.Pun;
 
 public partial class UIManager : MonoBehaviour
 {
+    // 속도 자체는 SerializeField가 빠르나 component miss이 우려됨으로 
+    // 코드 컨벤션 결과 Find로 결정
     public GameObject battleSceneUI = null;
     GameObject battleOptionPanel = null;
     GameObject leavPanel = null;
